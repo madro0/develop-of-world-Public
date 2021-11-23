@@ -21,7 +21,11 @@ let projectSchema = new Schema({
     state:{
         type: Boolean,
         default: true
-    }
+    },
+    advance: [{
+        type: Schema.Types.ObjectId,
+        ref: 'advanceProject'
+    }]
 });
 
 

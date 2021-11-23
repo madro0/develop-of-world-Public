@@ -19,3 +19,12 @@ if(process.env.NODE_ENV === 'dev'){
 }
 process.env.URLDB = urlDb;
 
+//=======================================
+//SEED de autenticación (jwt) 
+//=======================================
+process.env.SEED = process.env.SEED || 'este-es-el-seed-desarrollo';
+
+//=======================================
+//Vencimiento de token
+//=======================================
+process.CADUCIDAD_TOKEN = process.CADUCIDAD_TOKEN || '2h';

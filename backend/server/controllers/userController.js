@@ -9,26 +9,35 @@ const listUsers = async (req, res)=>{
     let limit = req.query.limit || 10;
     limit = Number(limit);
 
-    userModel.find({state: true}, 'name, email, role, state')
+    try {
+        let listUserDb = await userModel
+        .find({state: true},)
         .skip(from)
         .limit(limit)
-        .exec((err, usersDB)=>{
-            if(err){
-                return res.state(400).json({
-                    ok: false,
-                    err
-                });
-            }
+        .exec();
 
-            userModel.countDocuments({state: true}, (err, count)=>{
-                res.json({
-                    ok: true,
-                    usersDB,
-                    count
-                });
+        if (listUserDb.length === 0) {
+            return res.status(400).json({
+              ok: false,
+              err: {
+                message: "There is no active user with this id",
+              },
             })
-    })
-}
+        }
+
+        res.json({
+            ok: true,
+            users: listUserDb,
+            count: listUserDb.length
+        })
+
+    } catch (err) {
+        return res.status(500).json({
+            ok: false,
+            err
+        });
+    }
+}   
 
 const createUser = async (req, res)=>{
     let body = req.body;
@@ -54,8 +63,30 @@ const createUser = async (req, res)=>{
         });
     });
 }
+const  updateProject = async(req, res)=>{
+    let id = req.params.id;
+    let body = req.body;
+
+    try {
+        let userDb = await userModel.findByIdAndUpdate(id, body, {
+            new:true
+        });
+
+        res.json({
+            ok:true,
+            user: userDb
+        });
+
+    } catch (err) {
+        return res.status(500).json({
+            ok: false,
+            err,
+        });
+    }
+}
 
 module.exports = {
     createUser,
-    listUsers
+    listUsers,
+    updateProject
 }

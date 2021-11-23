@@ -32,7 +32,7 @@ let userSchema = new Schema({
         default: true
     },
     projects:[{
-        type:Schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: 'project'
     }]
 
