@@ -23,7 +23,6 @@ const listAllProjects = async (req, res)=>{
 
 const creatNewProject = async(req, res)=>{
     let body = req.body;
-
     let project = new projectModel({
         name: body.name,
         phase: body.phase,
@@ -33,7 +32,7 @@ const creatNewProject = async(req, res)=>{
     await project.save((err, projectDb)=>{
 
         if(err){
-            return res.estatus(400).json({
+            return res.status(400).json({
                 ok:false,
                 err,
             });
@@ -112,7 +111,7 @@ const deleteProject = async (req, res)=>{
         return res.status(500).json({
             ok: false,
             err,
-          });
+        });
     }
 }
 
