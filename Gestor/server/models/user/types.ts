@@ -1,7 +1,7 @@
 import { gql } from 'apollo-server-express';
 
 const userTypes = gql`
-    scalar Date
+scalar Date
 
     enum Enum_StateUser{
         PENDIENTE

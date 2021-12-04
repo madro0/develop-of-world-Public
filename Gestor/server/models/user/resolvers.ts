@@ -8,6 +8,7 @@ const userResolver = {
         },
         User: async (parent:any, args:any)=>{
             const user = await UserModel.findOne({_id: args._id});
+            return user;
         }
     },
     Mutation:{

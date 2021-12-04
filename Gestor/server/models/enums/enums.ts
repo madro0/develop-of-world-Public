@@ -8,7 +8,24 @@ enum Enum_StateUser{
     AUTORIZADO = 'AUTORIZADO',
     NO_AUTORIZADO = 'NO_AUTORIZADO'
 }
+enum Enum_StateProyect{
+    ACTIVO = 'ACTIVO',
+    INACTIVO = 'INACTIVO'
+}
+enum Enum_PhaseProyect{
+    INICIADO = 'INICIADO',
+    DESARROLLO = 'DESARROLLO',
+    TERMINADO = 'TERMINADO',
+    NULO = ''
+}
+enum Enum_TypeObjective{
+    GENERAL = 'GENERAL',
+    ESPECIFICO = 'ESPECIFICO'
+}
 export{
     Enum_Role,
-    Enum_StateUser
+    Enum_StateUser,
+    Enum_StateProyect,
+    Enum_PhaseProyect,
+    Enum_TypeObjective
 }
