@@ -7,7 +7,7 @@ const verifyToken=async(req, res, next)=>{
     if(!token){
         return res.status(401).json({
             ok:false,
-            message: 'no envio en token en la petision'
+            message: 'no envio en token en la peticion'
         })
     }
 

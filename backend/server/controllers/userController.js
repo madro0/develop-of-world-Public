@@ -18,10 +18,10 @@ const listUsers = async (req, res)=>{
 
         if (listUserDb.length === 0) {
             return res.status(400).json({
-              ok: false,
-              err: {
+                ok: false,
+                err: {
                 message: "There is no active user with this id",
-              },
+                },
             })
         }
 
