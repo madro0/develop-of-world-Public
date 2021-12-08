@@ -4,7 +4,29 @@ import '../styles/footer.css';
 const Footer = () => {
     return (
         <div className="footer">
-            Aca ira el footer (pie de pagina) de la pagina web
+            <div className="footer__redes">
+                <p>Siguenos en nuestras redes</p>
+                <div className="footer__redes--iconos">
+                    <figure>
+                        <i class='bx bxl-facebook-square' style={{ color: "#005dff" }}></i>
+                    </figure>
+                    <figure>
+                        <i class="fa fa-instagram" id="insta" aria-hidden="true"></i>
+                    </figure>
+                    <figure>
+                        <i class='bx bxl-discord' style={{ color: '#132aec' }}></i>
+                    </figure>
+                </div>
+            </div>
+
+            <div className="footer__info">
+                <p><b>Contacto: </b>proyectSAS@gmail.com</p>
+                <p><b>Medellin-Colombia</b></p>
+            </div>
+
+            <div className="footer__copi">
+                <p>Derechos reservados <b>© 2021 Proyect S.A.S</b></p>
+            </div>
         </div>
     )
 }
