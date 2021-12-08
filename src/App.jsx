@@ -1,4 +1,4 @@
-import { render } from "react-dom";
+// import { render } from "react-dom";
 import {
   BrowserRouter as Router,
   Routes,

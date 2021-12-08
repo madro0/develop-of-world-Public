@@ -1,5 +1,84 @@
+html{
+    background-color: #212529;
+}
 .public{
+    height: 92vh;
+    width: 99vw;
+    /* border: 5px solid red; */
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin: auto;
+    margin-top: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.public__main{
+    height: 100%;
+    width: 100%;
+    background-image: url(/src/images/public-01.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+}
+
+.public__card1, .public__card2{
+    background-color: #EDEDED;
+    opacity: 0.80;
+    /* border: 2px solid red; */
+    border-radius: 30px;
+}
+
+.public__card1{
+    height: 90%;
+    width: 70%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin: auto;
+    margin-left: 1.5rem;
     text-align: center;
-    color: red;
-    font-size: 1.5rem;
+    
+}
+
+.public__card1--tittle{
+    color: #F90716;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-top: 18%;
+    margin-bottom: 2rem;
+}
+
+.public__card1--text{
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0 1.5rem;
+    background-color: #C4C4C4;
+}
+
+.public__card2{
+    width: 16rem;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin: auto;
+    text-align: center;
+    background-color: #EDEDED;
+}
+
+.public__car2--div button{
+    color: #ffff;
+    margin: 10%;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: #A8A8A8;
+    display: inline-block;
+    
+}
+
+
+.public__ola{
+    background-color: #EDEDED;
 }
