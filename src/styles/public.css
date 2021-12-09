@@ -3,88 +3,105 @@ html{
 }
 .public{
     height: 92vh;
-    width: 98.8vw;
+    width: 99vw;
     /* border: 5px solid red; */
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 0;
     margin-right: 0;
     margin: auto;
-    margin-top: 2rem;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: sans-serif;
 }
 
-.public__main{
-    height: 100%;
-    width: 100%;
-    background-image: url(/src/images/public-01.jpg);
-    object-fit: cover;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    display: flex;
-}
 
-.public__card1, .public__card2{
+
+
+.public__header{
     background-color: #EDEDED;
-    opacity: 0.80;
-    /* border: 2px solid red; */
-    border-radius: 30px;
-}
-
-.public__card1{
-    height: 90%;
-    width: 70%;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin: auto;
-    margin-left: 1.5rem;
-    text-align: center;
-}
-
-.public__card1--contenido{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    display: grid;
+    grid-template-areas: "titulo titulo titulo titulo titulo titulo titulo titulo login" 
+                        "titulo titulo titulo titulo titulo titulo titulo titulo login";
+                        
     justify-content: center;
-    /* border: 2px solid red; */
 }
-
-.public__card1--tittle{
+                    
+.public__header--tittle{
+    grid-area: titulo;
+    text-align: center;
     color: #F90716;
-    font-size: 2rem;
-    font-weight: 900;
-    margin-bottom: 2rem;
-}
-
-.public__card1--text{
     font-size: 1.8rem;
-    font-weight: 800;
-    margin: 0 1.5rem;
+    font-weight: 900;
+    margin-right: 0rem;
+    margin-left: 18rem;
+}
+.public__header--boton{
+    grid-area: login;
+    margin-left: 20rem;
+}
+
+.public__header--boton button{
+    display: block;
+    margin-right: 0;
+    background-color: #212529;
+    color: white;
+    font-size: 1.2rem;
+    margin: 0.4rem 0rem;
+}
+
+.public__header--boton--centrar{
+    width: 100%;
+}
+
+.public__header--boton button:hover{
     background-color: #C4C4C4;
+    color: black;
 }
 
 
+/*aca ira contenido hacerca de la empresa*/
 
-.public__card2{
-    width: 16rem;
+.public__contenido{
+    background-image: url("../images/public-01.jpg");
+    height: 40rem;
+    width: 100%;
+    margin: 3rem 0rem 0rem 0rem;
+    /* border: 4px solid red; */
+    display: flex;
+}
+
+.public__contenido--text{
+    color: black;
+    background-color: white;
+    opacity: 0.9;
+    padding: 2rem 1rem;
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 0;
     margin-right: 0;
     margin: auto;
-    text-align: center;
-    background-color: #EDEDED;
+    width: 80%;
+    font-size: 1.8rem;
+    border-radius: 25px;
+}
+/*
+.public__contenido--igm{
+    margin: 5rem 0rem;
+    border: 3px solid red;
+    width: 200px;
 }
 
-.public__car2--div button{
-    color: #ffff;
-    margin: 10%;
-    font-size: 2rem;
-    font-weight: 700;
-    background-color: #A8A8A8;
-    display: inline-block;
-    
+.public__contenido--img figure{
+    flex-basis: 100px;
+    width: 20rem;
+    height: 100%;
+    border: 3px solid green;
 }
+
+.public__contenido--img img{
+    width: 100%;
+    height: 100%;
+}
+*/
 
 
 .public__ola{

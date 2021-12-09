@@ -8,13 +8,13 @@ const Footer = () => {
                 <p>Siguenos en nuestras redes</p>
                 <div className="footer__redes--iconos">
                     <figure>
-                        <i class='bx bxl-facebook-square' style={{ color: "#005dff" }}></i>
+                        <i className='bx bxl-facebook-square' style={{ color: "#005dff" }}></i>
                     </figure>
                     <figure>
-                        <i class="fa fa-instagram" id="insta" aria-hidden="true"></i>
+                        <i className="fa fa-instagram" id="insta" aria-hidden="true"></i>
                     </figure>
                     <figure>
-                        <i class='bx bxl-discord' style={{ color: '#132aec' }}></i>
+                        <i className='bx bxl-discord' style={{ color: '#132aec' }}></i>
                     </figure>
                 </div>
             </div>
