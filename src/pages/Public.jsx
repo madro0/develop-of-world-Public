@@ -10,15 +10,14 @@ const Public = () => {
                     <h1>Proyectos S.A.S</h1>
                 </div>
                 <div className="public__header--boton">
-                    <button className="public__header--boton--centrar">Ingresar</button>
-                    <button>Registrarse</button>
+                    <button className="public__header--boton--centrar">Log In</button>
                 </div>
             </header>
             <div className="public__main">
                 <div className="public__contenido">
                     <div className="public__contenido--text">
                         <p>
-                            Somos una empresa encargada a la gestion de proyectos tanto de pequeña como de gran escala, además de poder tener todo de menra ordenada, también ofrecemos multiples sistemas para los que requieran una gestión más personalizada.
+                            Somos una empresa encargada a la gestion de proyectos tanto de pequeña como de gran escala, además de poder tener todo de manera ordenada, también ofrecemos multiples sistemas para los que requieran una gestión más personalizada.
                         </p>
                         <p>
                             Proporcionamos sistemas especializados, seguimiento y una escalabilidad para que sus proyectos puedan empezar asi no se tenga una clara idea de que tanto recursos necesitará, nuestra infraestructura estará preparada para ello.
