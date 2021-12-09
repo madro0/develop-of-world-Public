@@ -1,4 +1,5 @@
-import {UserModel} from './user';
+import {UserModel} from '../models/user';
+import bcrypt  from 'bcrypt';
 
 const userResolver = {
     Query: {
@@ -17,13 +18,13 @@ const userResolver = {
                 name: args.name,
                 lastName: args.lastName,
                 email: args.email,
+                password: bcrypt.hashSync(args.password, 10),
                 role: args.role,
             });
 
             if(Object.keys(args).includes('state')){
-                userDb.state = args.this.state;
+                userDb.state = args.state;
             }
-
             return userDb;
         },
 

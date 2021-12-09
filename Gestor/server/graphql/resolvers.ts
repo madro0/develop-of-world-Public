@@ -1,6 +1,8 @@
-import { userResolver } from '../models/user/resolvers';
-import { projectResolvers } from '../models/project/resolvers';
+import { userResolver } from '../resolvers/userResolvers';
+import { projectResolvers } from '../resolvers/projectResolvers';
+import { authResolvers } from '../resolvers/authResolvers';
 export const resolvers = [
     userResolver,
-    projectResolvers
+    projectResolvers,
+    authResolvers
 ]

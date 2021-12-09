@@ -44,20 +44,26 @@ scalar Date
             name: String!
             lastName: String!
             email: String!
+            password: String!
             role: Enum_Role!
             state: Enum_StateUser
         ):User
 
         updateUser(
             _id: String!
-            name: String!
-            lastName: String!
-            email: String!
-            role: Enum_Role!
+            name: String
+            lastName: String
+            email: String
+            role: Enum_Role
             state: Enum_StateUser
         ): User
 
-        deleteUser(_id: String, email: String ): User
+        deleteUser(
+            _id: String, 
+            email: String 
+        ): User
+
+        
     }
 `; 
 export{ userTypes }

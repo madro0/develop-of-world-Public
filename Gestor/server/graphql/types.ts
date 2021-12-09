@@ -1,4 +1,9 @@
-import { userTypes } from "../models/user/types";
-import { projectTypes } from "../models/project/types";
+import { userTypes } from "../types/userTypes";
+import { projectTypes } from "../types/projectTypes";
+import { authTypes } from "../types/authTypes";
 
-export const types = [userTypes, projectTypes];
+export const types = [
+    userTypes, 
+    projectTypes, 
+    authTypes
+];

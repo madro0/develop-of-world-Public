@@ -1,8 +1,9 @@
 import { connect } from 'mongoose';
-import env from './env'
+import env from './env';
 
 const connectMongoDb = async()=>{
-    return await connect('mongodb+srv://madro:K8mwWFepr8Gmc73s@cluster0.yugug.mongodb.net/Gestor')
+
+    return await connect(env.URLDB)
     .then(()=>{
         console.log('Mongo db connection');
     })

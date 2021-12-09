@@ -1,8 +1,9 @@
-import { SchemaTypes, Schema, model } from "mongoose";
-import {Enum_Role, Enum_StateUser} from '../enums/enums';
+import { Schema, model } from "mongoose";
+import {Enum_Role, Enum_StateUser} from '../helpers/enums/enums';
 
-interface User {
+export interface User {
     email: string;
+    password: string;
     name: string,
     lastName: string,
     role: Enum_Role,
@@ -24,6 +25,10 @@ const userSchema = new Schema<User>({
     name:{
         type: String,
         required:true,
+    },
+    password:{
+        type:String,
+        required: true
     },
     lastName:{
         type: String,
