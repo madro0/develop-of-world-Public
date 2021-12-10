@@ -1,0 +1,31 @@
+.tableUsers{
+    background-color: #ededed;
+    width: 100%;
+    padding: 2rem .5rem;
+}
+
+.tableUsers table tr:nth-child(even){
+    background-color: white;
+}
+
+.tableUsers table th, td{
+  border-collapse: collapse;
+}
+
+.tableUsers table{
+    margin-left: 20%;
+}
+.tableUsers__thead{
+  border-bottom: solid 5px #0f362d;
+}
+
+
+.tableUsers__tittle th{
+    padding-right: 5rem;
+    text-align: left;
+}
+
+.tableUsers__data td{
+    text-align: left;
+}
+

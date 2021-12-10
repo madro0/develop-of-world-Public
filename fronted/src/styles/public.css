@@ -1,0 +1,108 @@
+html{
+    background-color: #212529;
+}
+.public{
+    height: 92vh;
+    width: 99vw;
+    /* border: 5px solid red; */
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+
+
+
+.public__header{
+    background-color: #EDEDED;
+    display: grid;
+    grid-template-areas: "titulo titulo titulo titulo titulo titulo titulo titulo login" 
+                        "titulo titulo titulo titulo titulo titulo titulo titulo login";
+                        
+    justify-content: center;
+}
+                    
+.public__header--tittle{
+    grid-area: titulo;
+    text-align: center;
+    color: #F90716;
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-right: 0rem;
+    margin-left: 18rem;
+}
+.public__header--boton{
+    grid-area: login;
+    margin-left: 20rem;
+}
+
+.public__header--boton button{
+    display: block;
+    background-color: #212529;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    padding: 0.2rem;
+    /* margin: 0.4rem 0rem; */
+}
+
+
+
+.public__header--boton button:hover{
+    background-color: #C4C4C4;
+    color: black;
+}
+
+
+/*aca ira contenido hacerca de la empresa*/
+
+.public__contenido{
+    background-image: url("../images/public-01.jpg");
+    height: 40rem;
+    width: 100%;
+    margin: 3rem 0rem 0rem 0rem;
+    /* border: 4px solid red; */
+    display: flex;
+}
+
+.public__contenido--text{
+    color: black;
+    background-color: white;
+    opacity: 0.9;
+    padding: 2rem 1rem;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin: auto;
+    width: 60%;
+    font-size: 1.8rem;
+    border-radius: 25px;
+}
+/*
+.public__contenido--igm{
+    margin: 5rem 0rem;
+    border: 3px solid red;
+    width: 200px;
+}
+
+.public__contenido--img figure{
+    flex-basis: 100px;
+    width: 20rem;
+    height: 100%;
+    border: 3px solid green;
+}
+
+.public__contenido--img img{
+    width: 100%;
+    height: 100%;
+}
+*/
+
+
+.public__ola{
+    background-color: #EDEDED;
+}

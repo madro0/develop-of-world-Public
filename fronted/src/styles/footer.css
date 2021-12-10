@@ -1,0 +1,44 @@
+.footer{
+    color: white;
+    margin: 1rem 0rem;
+    /* border: 3px solid wheat; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer div{
+    /* border: 3px solid red; */
+    width: 30vw;
+    text-align: center
+}
+
+.footer__info, .footer__copi{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin: auto;
+}
+
+.footer__info p{
+    margin: 10px 0px;
+}
+
+/*para el logo de instagram*/
+#insta {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    /* Also define standard property for compatibility */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    font-size: 3rem; /* change this to change the size*/
+}
+
+.footer__redes--iconos{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0px;
+}
+
+.footer__redes i{
+    font-size: 3rem;
+}
