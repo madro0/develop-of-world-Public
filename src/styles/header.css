@@ -1,8 +1,18 @@
 .header{
-    color: red;
-    text-align: center;
-    padding: 2rem 0rem;
     background-color: #ededed;
-    font-size: 1.5rem;
-    font-weight: 700;
+}
+
+.header h1{
+    text-align: center;
+    color: red;
+}
+
+.header ul{
+    text-align: center;
+    padding: .3rem 0rem;
+}
+
+.header li{
+    display: inline-block;
+    padding: .2rem 1rem;
 }

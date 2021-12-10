@@ -4,10 +4,15 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+
 import './App.css';
+
+// import de cada una de las paginas
 import Public from "./pages/Public";
+import Student from "./pages/Student";
 import Private from './pages/Private';
 import Admin from "./pages/Admin";
+import UserRegistered from "./components/UsertRegistered";
 
 function App() {
 
@@ -18,6 +23,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Public />} />
         <Route path="/private" element={<Private />} />
+        <Route path="/private/UserRegistered" element={<UserRegistered />} />
+        <Route path="/private/student" element={<Student />} />
         <Route path="/private/admin" element={<Admin />} />
       </Routes>
     </Router>
