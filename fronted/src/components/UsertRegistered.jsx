@@ -1,10 +1,13 @@
 import React from 'react'
 import '../styles/userRegistered.css';
+import Header from './Header';
+import Footer from '../components/Footer';
 
 const UserRegistered = () => {
     // lo que vera tanto el lider como el administrador a la hora de ver los usuarios registrados
     return (
         <div>
+            <Header />
             <div className="tableUsers">
                 <table>
                     <thead className="tableUsers__thead">
@@ -51,6 +54,7 @@ const UserRegistered = () => {
             </div>
             <div>
             </div>
+            <Footer />
         </div>
     )
 }
