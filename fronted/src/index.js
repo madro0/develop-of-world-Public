@@ -14,11 +14,13 @@ import Student from "./pages/Student";
 import Private from './pages/Private';
 import Admin from "./pages/Admin";
 import UserRegistered from "./components/UsertRegistered";
+import PageNotFound from './pages/PageNotFound';
 
 ReactDOM.render(
   <Router>
     <Routes>
       <Route path="/" element={<App />} />
+      <Route path="*" element={<PageNotFound />} />  {/* Para cuando no se encuentre la pagina */}
     </Routes>
 
     <Routes> {/* Acá iran las rutas para los que estan logueados en la pagina ya que si no, no tendran acceso */}
