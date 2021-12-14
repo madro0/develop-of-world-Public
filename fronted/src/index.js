@@ -15,20 +15,19 @@ import Private from './pages/Private';
 import Admin from "./pages/Admin";
 import UserRegistered from "./components/UsertRegistered";
 import PageNotFound from './pages/PageNotFound';
+import Projects from './components/Projects';
 
 ReactDOM.render(
   <Router>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="*" element={<PageNotFound />} />  {/* Para cuando no se encuentre la pagina */}
-    </Routes>
-
     <Routes> {/* Acá iran las rutas para los que estan logueados en la pagina ya que si no, no tendran acceso */}
+      <Route path="/" element={<App />} />
       <Route path="/private" element={<Private />}>
         <Route path="UserRegistered" element={<UserRegistered />} />
+        <Route path="Projects" element={<Projects />} />
         <Route path="student" element={<Student />} />
         <Route path="admin" element={<Admin />} />
       </Route>
+      <Route path="*" element={<PageNotFound />} />  {/* Para cuando no se encuentre la pagina */}
     </Routes>
   </Router>,
   document.getElementById('root')
