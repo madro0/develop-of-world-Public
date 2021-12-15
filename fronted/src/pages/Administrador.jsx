@@ -9,8 +9,10 @@ const Admnistrador = () => {
     return (
         <div className="private">
             <Header />
-                <Outlet /> {/*acá se renderizara cada una de las paginas, es casi como un prop */}
-            <Footer />
+            <Outlet /> {/*acá se renderizara cada una de las paginas, es casi como un prop */}
+            <div className='piePagina'>
+                <Footer />
+            </div>
         </div>
     )
 }

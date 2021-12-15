@@ -17,6 +17,7 @@ import PageNotFound from './pages/PageNotFound';
 import Projects from './components/Projects';
 import Profile from './components/Profile';
 import Lider from './layouts/Lider';
+import MyProjects from './components/MyProjects';
 
 ReactDOM.render(
   <Router>
@@ -35,6 +36,7 @@ ReactDOM.render(
         <Route path="Projects" element={<Projects />} />
         <Route path="student" element={<Student />} />
         <Route path="profile" element={<Profile />} />
+        <Route path="myProjects" element={<MyProjects />} />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />  {/* Para cuando no se encuentre la pagina */}

@@ -1,8 +1,9 @@
 .headerLider{
     display: flex;
     justify-content: space-between;
-    margin: 1rem 10%;
+    padding: 1rem 10%;
     align-items: center;
+    background-color: #212529;
 }
 
 

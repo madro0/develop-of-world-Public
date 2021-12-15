@@ -28,11 +28,11 @@ function App() {
             </p>
           </div>
         </div>
-      </div>
-      <div style={{ height: "80px", overflow: "hidden" }}>
-        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{ height: "100%", width: "100vw" }}>
-          <path d="M-89.72,-7.30 C67.72,266.02 255.08,58.80   499.44,133.80 L497.75,174.25 L-14.10,173.27 Z" style={{ stroke: "none", fill: "#08f" }}></path>
-        </svg>
+        <div style={{ height: "80px", overflow: "hidden" }}>
+          <svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{ height: "100%", width: "100vw" }}>
+            <path d="M-89.72,-7.30 C67.72,266.02 255.08,58.80   499.44,133.80 L497.75,174.25 L-14.10,173.27 Z" style={{ stroke: "none", fill: "#08f" }}></path>
+          </svg>
+        </div>
       </div>
       <Footer />
     </div>
