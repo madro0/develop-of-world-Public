@@ -1,15 +1,19 @@
 .footer{
     color: white;
-    margin: 1rem 0rem;
+    background-color: #212529;
+    width: 100%;
+    /* margin: 1rem 0rem; */
     /* border: 3px solid wheat; */
     display: flex;
     justify-content: space-evenly;
+    /* position: fixed;
+    bottom: 0; */
 }
 
 .footer div{
     /* border: 3px solid red; */
     width: 30vw;
-    text-align: center
+    text-align: center;
 }
 
 .footer__info, .footer__copi{

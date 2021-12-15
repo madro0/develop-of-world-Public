@@ -1,20 +1,76 @@
 .projects{
     display: flex;
     background-color: #ededed;
-    color: black;
+}
+
+.projects thead{
+    background-color: #686d76;
+}
+
+
+.projects{
     width: 100%;
-    height: 80vh;
+    padding: 5rem 0rem 30rem 0rem;
+    display: flex;
     justify-content: center;
-    padding: 4rem 0rem;
+    color: black;
+}
+
+table{
+    border-collapse: collapse;
+    width: 95vw;
     text-align: center;
 }
 
-
-.projects td{
-    padding-right: 5rem;
-    /* border: 2px solid red; */
+thead th{
+    /* border: 1px solid red; */
+    height: 2rem;
+    color: white;
 }
 
-.projects--id{
-    width: 2rem;
+tbody tr{
+    height: 3rem;
+}
+
+thead th:nth-child(1) {
+    width: 5%;
+    text-align: center;
+}
+
+thead th:nth-child(2) {
+    width: 13%;
+}
+
+thead th:nth-child(3) {
+    width: 8%;
+}
+
+thead th:nth-child(4) {
+    width: 8%;
+}
+
+thead th:nth-child(5) {
+    width: 8%;
+}
+
+thead th:nth-child(6) {
+    width: 20%;
+}
+
+thead th:nth-child(7) {
+    width: 15%;
+}
+
+thead th:nth-child(8) {
+    width: 8%;
+}
+
+thead th:nth-child(9) {
+    width: 11%;
+}
+
+@media (max-width:1382px){
+    table{
+        width: 100vw;
+    }
 }

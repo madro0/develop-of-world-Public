@@ -5,7 +5,7 @@ import Header from '../components/Header';
 // importe de los estilos
 import '../styles/private.css';
 
-const Private = () => {
+const Admnistrador = () => {
     return (
         <div className="private">
             <Header />
@@ -15,4 +15,4 @@ const Private = () => {
     )
 }
 
-export default Private
+export default Admnistrador
