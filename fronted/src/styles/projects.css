@@ -10,11 +10,26 @@
 
 .projects{
     width: 100%;
-    padding: 5rem 0rem 30rem 0rem;
+    padding: 5rem 0rem 0rem 0rem;
     display: flex;
     justify-content: center;
     color: black;
 }
+
+.projects__thead{
+    border-bottom: solid 5px #ededed;
+}
+
+.projects__data tr:nth-child(even){
+    background-color: white;
+    color: black;
+}
+
+.projects__data tr:hover{
+    background-color: #686d76;
+    color: white;
+}
+
 
 table{
     border-collapse: collapse;

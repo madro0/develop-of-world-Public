@@ -6,23 +6,48 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    
 }
 
-.tableUsers table tr:nth-child(even){
-    background-color: white;
+.tableUsers table{
+    background-color: #ededed;
+    color: black;
 }
+
+.tableUsers__data tr:nth-child(even){
+    background-color: white;
+    color: black;
+}
+
 
 .tableUsers__thead{
-    border-bottom: solid 5px #0f362d;
+    border-bottom: solid 5px #ededed;
+}
+
+.tableUsers thead{
+    background-color: #686d76;
 }
 
 
 .tableUsers__tittle th{
-    padding-right: 8rem;
-    text-align: left;
+    width: auto;
+    text-align: center;
 }
 
 .tableUsers__data td{
-    text-align: left;
+    text-align: center;
     padding: .5rem 0rem;
 }
+
+.tableUsers__data{
+    outline: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+.tableUsers__data tr:hover{
+    background-color: #686d76;
+    color: white;
+}
+

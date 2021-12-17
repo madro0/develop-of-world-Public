@@ -1,18 +1,23 @@
 .header{
-    background-color: #ededed;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 10%;
+    align-items: center;
+    background-color: #212529;
 }
+
 
 .header h1{
-    text-align: center;
     color: red;
-}
-
-.header ul{
-    text-align: center;
-    padding: .3rem 0rem;
 }
 
 .header li{
     display: inline-block;
-    padding: .2rem 1rem;
+    padding: 0rem 1rem;
+    color: white;
+}
+
+.header li:hover{
+    color: red;
+    transform: scale(1.3);
 }

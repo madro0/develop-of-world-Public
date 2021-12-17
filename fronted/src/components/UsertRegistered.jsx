@@ -6,7 +6,7 @@ const UserRegistered = () => {
     return (
         <div className="tableUsers">
             <div>
-                <table>
+                <table className='tableUsers__table'>
                     <thead className="tableUsers__thead">
                         <tr className="tableUsers__tittle">
                             <th>ID</th>
