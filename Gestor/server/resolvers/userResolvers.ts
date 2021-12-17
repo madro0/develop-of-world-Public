@@ -1,13 +1,18 @@
 import {UserModel} from '../models/user';
 import bcrypt  from 'bcrypt';
+import { MyContext } from '../context/MyContext';
+import { verifyToken } from '../middleware/auth';
+// import Router from 'graphql-router-ware';
 
 const userResolver = {
+    // UseMiddleware(verifyToken);
     Query: {
-        Users: async (parent:any, args:any)=>{
+        Users:  async (parent:any, args:any,   contaxt: MyContext)=>{
             const users = await UserModel.find();
             return users;
-        },
+        }, 
         User: async (parent:any, args:any)=>{
+            
             const user = await UserModel.findOne({_id: args._id});
             return user;
         }

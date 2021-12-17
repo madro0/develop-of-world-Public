@@ -1,0 +1,23 @@
+.headerLider{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 10%;
+    align-items: center;
+    background-color: #212529;
+}
+
+
+.headerLider h1{
+    color: red;
+}
+
+.headerLider li{
+    display: inline-block;
+    padding: 0rem 1rem;
+    color: white;
+}
+
+.headerLider li:hover{
+    color: red;
+    transform: scale(1.3);
+}
