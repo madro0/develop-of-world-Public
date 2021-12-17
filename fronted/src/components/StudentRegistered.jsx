@@ -1,14 +1,12 @@
 import React from 'react'
-import '../styles/userRegistered.css';
 
-const UserRegistered = () => {
-    // lo que vera tanto el lider como el administrador a la hora de ver los usuarios registrados
+const StudentRegistered = () => {
     return (
-        <div className="tableUsers">
+        <div>
             <div>
-                <table className='tableUsers__table'>
-                    <thead className="tableUsers__thead">
-                        <tr className="tableUsers__tittle">
+                <table>
+                    <thead className="student__thead">
+                        <tr className="student__tittle">
                             <th>ID</th>
                             <th>Nombre</th>
                             <th>Correo</th>
@@ -17,7 +15,7 @@ const UserRegistered = () => {
                         </tr>
                     </thead>
 
-                    <tbody className="tableUsers__data">
+                    <tbody className="student__data">
                         <tr>
                             <td>789465</td>
                             <td>Juan Fernando</td>
@@ -49,9 +47,8 @@ const UserRegistered = () => {
                     </tbody>
                 </table>
             </div>
-
         </div>
     )
 }
 
-export default UserRegistered
+export default StudentRegistered

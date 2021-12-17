@@ -1,14 +1,10 @@
 import React from 'react';
-import Header from '../components/Header';
 import '../styles/student.css';
 
 const Student = () => {
     return (
-        <div>
-            <Header />
-            <div className="student">
-
-            </div>
+        <div className="student">
+            <h1>Acá ira la interfaz de estudiante</h1>
         </div>
     )
 }

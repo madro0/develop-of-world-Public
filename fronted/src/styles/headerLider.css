@@ -1,4 +1,4 @@
-.header{
+.headerLider{
     display: flex;
     justify-content: space-between;
     padding: 1rem 10%;
@@ -7,17 +7,17 @@
 }
 
 
-.header h1{
+.headerLider h1{
     color: red;
 }
 
-.header li{
+.headerLider li{
     display: inline-block;
     padding: 0rem 1rem;
     color: white;
 }
 
-.header li:hover{
+.headerLider li:hover{
     color: red;
     transform: scale(1.3);
 }

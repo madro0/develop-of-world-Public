@@ -1,9 +1,6 @@
-html{
-    background-color: #212529;
-}
 .public{
-    height: 92vh;
-    width: 99vw;
+    height: 100vh;
+    width: 100%;
     /* border: 5px solid red; */
     margin-top: 0;
     margin-left: 0;
@@ -11,13 +8,20 @@ html{
     margin-right: 0;
     margin: auto;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.public__main{
+    flex-grow: 1;
 }
 
 
 
 
 .public__header{
-    background-color: #EDEDED;
+    background-color: #212529;
     display: grid;
     grid-template-areas: "titulo titulo titulo titulo titulo titulo titulo titulo login" 
                         "titulo titulo titulo titulo titulo titulo titulo titulo login";
@@ -32,39 +36,35 @@ html{
     font-size: 1.8rem;
     font-weight: 900;
     margin-right: 0rem;
-    margin-left: 18rem;
+    margin-left: 14rem;
 }
 .public__header--boton{
     grid-area: login;
-    margin-left: 20rem;
+    margin-left: 16rem;
 }
 
 .public__header--boton button{
     display: block;
-    background-color: #212529;
-    color: white;
+    background-color: #C4C4C4;
+    color: black;
     font-size: 1.2rem;
     margin-top: 1rem;
     padding: 0.2rem;
-    /* margin: 0.4rem 0rem; */
 }
 
 
 
 .public__header--boton button:hover{
-    background-color: #C4C4C4;
-    color: black;
+    transform: scale(1.3);
 }
 
 
-/*aca ira contenido hacerca de la empresa*/
 
 .public__contenido{
     background-image: url("../images/public-01.jpg");
     height: 40rem;
     width: 100%;
     margin: 3rem 0rem 0rem 0rem;
-    /* border: 4px solid red; */
     display: flex;
 }
 
@@ -78,31 +78,21 @@ html{
     margin-bottom: 0;
     margin-right: 0;
     margin: auto;
-    width: 60%;
+    width: 70%;
     font-size: 1.8rem;
     border-radius: 25px;
 }
-/*
-.public__contenido--igm{
-    margin: 5rem 0rem;
-    border: 3px solid red;
-    width: 200px;
-}
-
-.public__contenido--img figure{
-    flex-basis: 100px;
-    width: 20rem;
-    height: 100%;
-    border: 3px solid green;
-}
-
-.public__contenido--img img{
-    width: 100%;
-    height: 100%;
-}
-*/
 
 
 .public__ola{
     background-color: #EDEDED;
+}
+
+@media (max-width:1200px) {
+    .public__header--tittle{
+        font-size: 1.4rem;
+    }
+    .public__contenido--text{
+        font-size: 1.3rem;
+    }
 }
