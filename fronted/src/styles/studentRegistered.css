@@ -1,0 +1,11 @@
+.student__table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0rem;
+}
+
+
+.student__tittle{
+    background-color: black;
+}

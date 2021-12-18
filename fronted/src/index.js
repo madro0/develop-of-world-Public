@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 
 import App from './App';
-import Student from "./pages/Student";
+// import Student from "./pages/Student"; por el momento no se anda usando 
 import Administrador from './pages/Administrador';
 import UserRegistered from "./components/UsertRegistered";
 import PageNotFound from './pages/PageNotFound';
@@ -18,6 +18,7 @@ import Projects from './components/Projects';
 import Profile from './components/Profile';
 import Lider from './layouts/Lider';
 import MyProjects from './components/MyProjects';
+import StudentRegistered from './components/StudentRegistered';
 
 ReactDOM.render(
   <Router>
@@ -26,7 +27,6 @@ ReactDOM.render(
       <Route path="/administrador" element={<Administrador />}>
         <Route path="UserRegistered" element={<UserRegistered />} />
         <Route path="Projects" element={<Projects />} />
-        <Route path="student" element={<Student />} />
         <Route path="profile" element={<Profile />} />
       </Route>
 
@@ -34,7 +34,7 @@ ReactDOM.render(
         <Route path="/lider" element={<Projects />} /> {/*Pagina que carga por defecto */}
         <Route path="UserRegistered" element={<UserRegistered />} />
         <Route path="Projects" element={<Projects />} />
-        <Route path="student" element={<Student />} />
+        <Route path="studentRegistered" element={<StudentRegistered />} />
         <Route path="profile" element={<Profile />} />
         <Route path="myProjects" element={<MyProjects />} />
       </Route>

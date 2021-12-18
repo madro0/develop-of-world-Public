@@ -1,8 +1,9 @@
 import React from 'react'
+import '../styles/studentRegistered.css';
 
 const StudentRegistered = () => {
     return (
-        <div>
+        <div className='student__table'>
             <div>
                 <table>
                     <thead className="student__thead">
@@ -11,6 +12,7 @@ const StudentRegistered = () => {
                             <th>Nombre</th>
                             <th>Correo</th>
                             <th>Estado</th>
+                            <th>ID Projet</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -21,6 +23,7 @@ const StudentRegistered = () => {
                             <td>Juan Fernando</td>
                             <td>Juanfed12345@gmail.com</td>
                             <td>Autorizado</td>
+                            <td>125476</td>
                             <td><button>Editar Estado</button></td>
                         </tr>
                         <tr>
@@ -28,6 +31,7 @@ const StudentRegistered = () => {
                             <td>Alexandra Herrera</td>
                             <td>AlexaFernandes@outlook.com</td>
                             <td>Autorizado</td>
+                            <td>125476</td>
                             <td><button>Editar Estado</button></td>
                         </tr>
                         <tr>
@@ -35,6 +39,7 @@ const StudentRegistered = () => {
                             <td>Diego Quiroz</td>
                             <td>Dieguito123@gmail.com</td>
                             <td>No Autorizado</td>
+                            <td>125476</td>
                             <td><button>Editar Estado</button></td>
                         </tr>
                         <tr>
@@ -42,6 +47,7 @@ const StudentRegistered = () => {
                             <td>Carla</td>
                             <td>Carla24@gmail.com</td>
                             <td>No Autorizado</td>
+                            <td>125476</td>
                             <td><button>Editar Estado</button></td>
                         </tr>
                     </tbody>
