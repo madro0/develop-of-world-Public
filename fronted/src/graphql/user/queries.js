@@ -1,9 +1,9 @@
-import {gql } from '@apollo/client';
+import { gql } from '@apollo/client';
 
 const GET_USERS = gql`
 
-    query Query($filter: UsersFilter){
-        Users(filter: $filter){
+    query Query{
+        Users {
             _id
             name
             lastName

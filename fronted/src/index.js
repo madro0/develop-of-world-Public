@@ -19,7 +19,22 @@ import Profile from './components/Profile';
 import Lider from './layouts/Lider';
 import MyProjects from './components/MyProjects';
 
+import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+
+const httpLink = createHttpLink({
+  uri: 'http://localhost:4000/graphql',
+})
+const authLink = setContext((_, {})=>{
+
+})
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link: authLink.concat(httpLink) 
+})
+
 ReactDOM.render(
+  <ApolloProvider client={client}>
   <Router>
     <Routes> {/* Acá iran las rutas para los que estan logueados en la pagina ya que si no, no tendran acceso */}
       <Route path="/" element={<App />} />
@@ -41,7 +56,8 @@ ReactDOM.render(
 
       <Route path="*" element={<PageNotFound />} />  {/* Para cuando no se encuentre la pagina */}
     </Routes>
-  </Router>,
+  </Router>
+  </ApolloProvider>,
   document.getElementById('root')
 );
 

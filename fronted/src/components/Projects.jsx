@@ -1,60 +1,70 @@
-import React from 'react'
+import React,  { useEffect } from 'react'
 import '../styles/projects.css';
+import {useQuery } from '@apollo/client';
+import { PROJECTS } from '../graphql/project/queries';
+import { Enum_StateProyect, Enum_TypeObjective } from '../helpers/enums/enums';
+import { toast } from 'react-toastify';
 
 const Projects = () => {
+    const {data, error, loading} = useQuery(PROJECTS);
     
+    useEffect(()=>{
+        if(error){
+            toast.error('Error consultado usuarios');
+        }
+    })
+
+    if(loading) return <div>Cargando...</div>
+
     return (
         <div className='projects'>
             <div>
             <table>
                     <thead className="projects__thead">
+                        
                         <tr className="projects__tittle">
                             <th className='projects--id'>ID</th>
                             <th>Nombre</th>
                             <th>Aprovacion</th>
                             <th>Estado</th>
-                            <th>Proceso</th>
+                            <th>Fase</th>
                             <th>Foco General</th>
                             <th>Focos Espesifico</th>
-                            <th>Presupuesto</th>
+                            <th>Lider</th>
                             <th>Editar</th>
                         </tr>
                     </thead>
 
                     <tbody className="projects__data">
-                        <tr>
-                            <td projects__id>789465</td>
-                            <td>Reparacion de calles</td>
-                            <td>Aprovado</td>
-                            <td>Autorizado</td>
-                            <td>En desarrollo</td>
-                            <td>Mejorar el estado de las vias</td>
-                            <td>Tapar los huecos de las calles</td>
-                            <td>80.456.000</td>
-                            <td><button>Editar Estado</button></td>
-                        </tr>
-                        <tr>
-                            <td projects__id>789465</td>
-                            <td>Reparacion de calles</td>
-                            <td>Aprovado</td>
-                            <td>Autorizado</td>
-                            <td>En desarrollo</td>
-                            <td>Mejorar el estado de las vias</td>
-                            <td>Tapar los huecos de las calles</td>
-                            <td>80.456.000</td>
-                            <td><button>Editar Estado</button></td>
-                        </tr>
-                        <tr>
-                            <td projects__id>789465</td>
-                            <td>Reparacion de calles</td>
-                            <td>Aprovado</td>
-                            <td>Autorizado</td>
-                            <td>En desarrollo</td>
-                            <td>Mejorar el estado de las vias</td>
-                            <td>Tapar los huecos de las calles</td>
-                            <td>80.456.000</td>
-                            <td><button>Editar Estado</button></td>
-                        </tr>
+                        {/* {console.log(data)} */}
+                        {
+                            data.Projects.map((itemProject, index)=>(
+                                <tr key={index}>
+                                    <td >{itemProject._id}</td>
+                                    <td>{itemProject.name}</td>
+                                    <td>Aprovado</td>
+                                    <td>{itemProject.state}</td>
+                                    <td>{itemProject.phase}</td>
+
+                                    {
+                                        itemProject.objectives[0] ?
+                                            itemProject.objectives[0].type == "GENERAL" ? (<td>{itemProject.objectives[0].description}</td>) : (<td></td>)
+                                        : <td></td>   
+                                    }
+                                    {
+                                        itemProject.objectives[1] ?
+                                            itemProject.objectives[1].type == "ESPECIFICO" ? (<td>{itemProject.objectives[1].description}</td>) : (<td></td>)
+                                        : <td></td>   
+                                    }
+                                    
+                                    {/* <td>{itemProject.objectives.type = "ESPECIFICO"? "ESPECIFICO" :""}</td> */}
+                                    <td>{`${itemProject.leader.name} ${itemProject.leader.lastName}` }</td>
+                                    <td><button>Editar Estado</button></td>
+                                </tr>
+                            ))
+                        }
+                        
+                        
                     </tbody>
                 </table>
             </div>
