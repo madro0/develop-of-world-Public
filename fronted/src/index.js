@@ -11,6 +11,8 @@ import {
 
 import App from './App';
 import Student from "./pages/Student";
+import Login from './pages/Login';
+import { CreateProject } from './pages/CreateProject'; 
 import Administrador from './pages/Administrador';
 import UserRegistered from "./components/UsertRegistered";
 import PageNotFound from './pages/PageNotFound';
@@ -21,6 +23,7 @@ import MyProjects from './components/MyProjects';
 
 import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import { Project } from './pages/CreateProject';
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:4000/graphql',
@@ -38,9 +41,9 @@ ReactDOM.render(
   <Router>
     <Routes> {/* Acá iran las rutas para los que estan logueados en la pagina ya que si no, no tendran acceso */}
       <Route path="/" element={<App />} />
+
       <Route path="/administrador" element={<Administrador />}>
         <Route path="UserRegistered" element={<UserRegistered />} />
-        <Route path="Projects" element={<Projects />} />
         <Route path="student" element={<Student />} />
         <Route path="profile" element={<Profile />} />
       </Route>
@@ -49,9 +52,14 @@ ReactDOM.render(
         <Route path="/lider" element={<Projects />} /> {/*Pagina que carga por defecto */}
         <Route path="UserRegistered" element={<UserRegistered />} />
         <Route path="Projects" element={<Projects />} />
+        <Route path="Projects/newproject" element={<CreateProject />} />
         <Route path="student" element={<Student />} />
         <Route path="profile" element={<Profile />} />
         <Route path="myProjects" element={<MyProjects />} />
+      </Route>
+
+      <Route path="/login" element={<Login/>}>
+
       </Route>
 
       <Route path="*" element={<PageNotFound />} />  {/* Para cuando no se encuentre la pagina */}

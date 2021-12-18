@@ -12,6 +12,7 @@ const HeaderLider = () => {
                 <ul>
                     <Link to="/lider/StudentRegistered"><li>Registered Student</li></Link>
                     <Link to="/lider/Projects"><li>Projects</li></Link>
+                    <Link to="/lider/Projects/newproject"><li>Nuevo projecto</li></Link>
                     <Link to="/lider/MyProjects"><li>My Projects</li></Link>
                     <Link to="/lider/Requests"><li>Requests</li></Link>
                     <Link to="/lider/Profile"><li>Profile</li></Link>
