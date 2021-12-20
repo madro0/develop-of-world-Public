@@ -1,7 +1,6 @@
-import '../styles/myProjects.css';
+import React from 'react'
 
-
-const MyProjects = () => {
+const ProjectsEstudent = () => {
     return (
         <div className='MyProjects'>
                 <div className='MyProjects__table'>
@@ -39,4 +38,4 @@ const MyProjects = () => {
     )
 }
 
-export default MyProjects
+export default ProjectsEstudent

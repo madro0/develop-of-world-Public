@@ -1,0 +1,26 @@
+.student__table{
+    width: 100%;
+    padding: 5rem 0rem 0rem 0rem;
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+.student__thead tr > th {
+    background-color: #686d76;
+    text-align: center;
+}
+
+.student__thead{
+    border-bottom: solid 5px #ededed;
+}
+
+.student__data tr:nth-child(even){
+    background-color: white;
+    color: black;
+}
+
+.student__data tr:hover{
+    background-color: #686d76;
+    color: white;
+}

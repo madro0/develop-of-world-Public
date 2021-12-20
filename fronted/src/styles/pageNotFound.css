@@ -1,5 +1,11 @@
 .error{
-    color: white;
+    color: black;
     font-size: 2rem;
     text-align: center;
+}
+
+.error__link{
+    color: red;
+    font-size: 3rem;
+    font-weight: 800;
 }

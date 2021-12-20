@@ -1,6 +1,5 @@
 .projects{
     display: flex;
-    background-color: #ededed;
 }
 
 .projects thead{
@@ -18,6 +17,10 @@
 
 .projects__thead{
     border-bottom: solid 5px #ededed;
+}
+
+.projects__thead tr > th{
+    text-align: center;
 }
 
 .projects__data tr:nth-child(even){

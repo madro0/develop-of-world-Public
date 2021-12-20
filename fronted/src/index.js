@@ -20,10 +20,14 @@ import Projects from './components/Projects';
 import Profile from './components/Profile';
 import Lider from './layouts/Lider';
 import MyProjects from './components/MyProjects';
+import Estudiante from './layouts/Estudiante';
+import Postulaciones from './components/Postulaciones';
+import ProjectsEstudent from './components/ProjectsEstudent';
 
 import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { Project } from './pages/CreateProject';
+import StudentRegistered from './components/StudentRegistered';
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:4000/graphql',
@@ -43,19 +47,28 @@ ReactDOM.render(
       <Route path="/" element={<App />} />
 
       <Route path="/administrador" element={<Administrador />}>
+        <Route path="/administrador" element={<UserRegistered />} />
         <Route path="UserRegistered" element={<UserRegistered />} />
-        <Route path="student" element={<Student />} />
+        <Route path="Projects" element={<Projects />} />
         <Route path="profile" element={<Profile />} />
       </Route>
 
       <Route path="/lider" element={<Lider />}>
         <Route path="/lider" element={<Projects />} /> {/*Pagina que carga por defecto */}
         <Route path="UserRegistered" element={<UserRegistered />} />
+        <Route path="StudentRegistered" element={<StudentRegistered />} />
         <Route path="Projects" element={<Projects />} />
         <Route path="Projects/newproject" element={<CreateProject />} />
         <Route path="student" element={<Student />} />
         <Route path="profile" element={<Profile />} />
         <Route path="myProjects" element={<MyProjects />} />
+      </Route>
+
+      <Route path="/estudiante" element={<Estudiante />}>
+        {/* <Route path="/estudiante" element={<Postulaciones />} /> */}
+        <Route path="/estudiante" element={<Postulaciones />} />
+        <Route path="proyectos" element={<Postulaciones />} />
+        <Route path="projectsEstudent" element={<ProjectsEstudent />} />
       </Route>
 
       <Route path="/login" element={<Login/>}>

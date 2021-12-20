@@ -8,8 +8,8 @@ const PageNotFound = () => {
             <div className='error__tittle'>
                 <h1>Pagina no encontrada</h1>
             </div>
-            <div className='error__link'>
-                <Link to="/">Volver a inicio</Link>
+            <div>
+                <Link to="/"><p className='error__link'>Volver a inicio</p></Link>
             </div>
         </div>
     )
