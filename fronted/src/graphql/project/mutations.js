@@ -2,26 +2,35 @@ import { gql } from '@apollo/client';
 
 const CREATE_PROJECT = gql`
     mutation CreateProject(
-        $name: String!
-        $phase: String!
-        $startDate: Date!
-        $endDate: Date!
-        $leader: String!
-        $state: String!
-        $objectives:[createObjective]
+        $name: String!, 
+        $startDate: Date!, 
+        $endDate: Date!, 
+        $leader: String!, 
+        $phase: Enum_PhaseProyect!, 
+        $state: Enum_StateProyect!
     ){
         createProject(
-            name: $name
-            phase: $phase
-            startDate: $startDate
-            endDate: $endDate
-            leader: $leader
+            name: $name, 
+            startDate: $startDate, 
+            endDate: $endDate, 
+            leader: $leader, 
+            phase: $phase, 
             state: $state
-            objectives: $objectives 
         ){
             _id
         }
     }
 `;
 
-export { CREATE_PROJECT };
+const DELETE_PROJECT = gql`
+    mutation Mutation($id: String) {
+        deleteProject(_id: $id) {
+            _id
+            name
+        }
+    }
+`;
+
+
+
+export { CREATE_PROJECT,DELETE_PROJECT };

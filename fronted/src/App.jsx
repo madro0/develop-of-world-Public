@@ -1,10 +1,9 @@
-import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
 import React from 'react';
 import './App.css';
 // import fondoPublic from '../images/public-01.jpg';
 import Footer from './components/Footer';
 import './styles/public.css';
+import {Link } from 'react-router-dom';
 
 function App() {
 
@@ -29,7 +28,8 @@ function App() {
             <h1>Proyectos S.A.S</h1>
           </div>
           <div className="public__header--boton">
-            <button className="public__header--boton--centrar">Log In</button>
+            
+            <Link to="/login" > <button className="public__header--boton--centrar">Log In</button> </Link>
           </div>
         </header>
         <div className="public__main">

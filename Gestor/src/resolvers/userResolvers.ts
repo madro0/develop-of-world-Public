@@ -36,7 +36,7 @@ const userResolver = {
         updateUser: async (parent:any, args:any)=>{
             const userDb = await UserModel.findByIdAndUpdate(args._id,{
                 name: args.name,
-                lastname: args.lastName,
+                lastName: args.lastName,
                 email: args.email,
                 role: args.role,
                 state: args.state

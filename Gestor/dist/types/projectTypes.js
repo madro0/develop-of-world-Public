@@ -1,7 +1,8 @@
-import { gql } from 'apollo-server-express';
-
-
-const projectTypes = gql`
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.projectTypes = void 0;
+const apollo_server_express_1 = require("apollo-server-express");
+const projectTypes = (0, apollo_server_express_1.gql) `
     scalar Date
 
     enum Enum_PhaseProyect {
@@ -50,9 +51,8 @@ const projectTypes = gql`
             startDate: Date!
             endDate: Date!
             leader: String!
-            objectives: [createObjective!]
+            objectives: [createObjective]
         ): Project
     }
 `;
-
-export {projectTypes};
+exports.projectTypes = projectTypes;

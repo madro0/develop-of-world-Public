@@ -2,6 +2,7 @@ import React from 'react';
 import { useMutation } from '@apollo/client';
 import { CREATE_PROJECT } from '../graphql/project/mutations';
 import { useForm } from '../hooks/useForm';
+import Swal from 'sweetalert2';
 
 export const CreateProject = () =>{
 
@@ -17,16 +18,41 @@ export const CreateProject = () =>{
         // description
     })
     const {name,id, startDate,endDate, leader, general, especifico  } = formValues
+    
 
-    const[newProject] = useMutation(CREATE_PROJECT); 
+    const[newProject, {data, loading, error}] = useMutation(CREATE_PROJECT,{
+
+        onError: () => {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'Tu proyecto no fue guardado',
+                showConfirmButton: false,
+                timer: 1500
+              })
+        },
+        onCompleted: () => {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Nuevo proyecto agregado correctamente',
+                showConfirmButton: false,
+                timer: 1500
+              })
+        }
+    }); 
 
     const submitForma = (e)=>{
         e.preventDefault();
-        console.log(formValues);
+        // console.log(formValues);
         newProject({ 
             variables: formValues
         });
     }
+    
+    // if(loading) return  "cargando...";
+    
+    // if(error) return `submission error! ${error.message}`;
 
     return (
         <div>
@@ -82,6 +108,9 @@ export const CreateProject = () =>{
                     </div> 
                            
                 </form>
+
+                
+                
             </div>
              <hr/>                     
             {/* <div className="product__list">
