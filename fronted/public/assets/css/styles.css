@@ -364,6 +364,9 @@ td input{
 .select__search-item-last{
     height: 1rem;
 }
+.icon:hover {
+   background-color: #686D76;
+}
 
 
 @media screen and (min-width: 768px) {

@@ -13,6 +13,7 @@ import App from './App';
 import Student from "./pages/Student";
 import Login from './pages/Login';
 import { CreateProject } from './pages/CreateProject'; 
+import { UpdateProject } from './pages/UpdateProject'; 
 import Administrador from './pages/Administrador';
 import UserRegistered from "./components/UsertRegistered";
 import PageNotFound from './pages/PageNotFound';
@@ -59,6 +60,7 @@ ReactDOM.render(
         <Route path="StudentRegistered" element={<StudentRegistered />} />
         <Route path="Projects" element={<Projects />} />
         <Route path="Projects/newproject" element={<CreateProject />} />
+        <Route path="Projects/updateproject" element={<UpdateProject />} />
         <Route path="student" element={<Student />} />
         <Route path="profile" element={<Profile />} />
         <Route path="myProjects" element={<MyProjects />} />

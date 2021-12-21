@@ -1,68 +1,31 @@
 import React from 'react';
-import { useMutation } from '@apollo/client';
-import { CREATE_PROJECT } from '../graphql/project/mutations';
-import { PROJECTS } from '../graphql/project/queries';
 import { useForm } from '../hooks/useForm';
-import Swal from 'sweetalert2';
+// import { UPDATE} 
 
-export const CreateProject = () =>{
-
-    const[formValues, handleInputChange, handleInputChangeSelect, inputChange] = useForm({
+export const UpdateProject = ()=>{
+    const [formValues, handleInputChange, handleInputChangeSelect, inputChange] = useForm({
         name: '',
         id: '',
         startDate: new Date(2021,10,10),
         endDate: new Date(2022,10,10),
-        leader: '61b18ddf0e4e2df6a34bd393',
-        state: "ACTIVO",
-        phase: "INICIADO"
+        leader: '',
+        state: "",
+        phase: ""
         
         // description
-    })
-    const {name,id, startDate,endDate, leader, general, especifico  } = formValues
-    
+    });
+    const {name, id, startDate, endDate} = formValues;
 
-    const[newProject, {data, loading, error}] = useMutation(CREATE_PROJECT,{
-
-        refetchQueries:[{query:PROJECTS}],
-
-        onError: () => {
-            Swal.fire({
-                position: 'top-end',
-                icon: 'error',
-                title: 'Tu proyecto no fue guardado',
-                showConfirmButton: false,
-                timer: 1500
-              })
-        },
-        onCompleted: () => {
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Nuevo proyecto agregado correctamente',
-                showConfirmButton: false,
-                timer: 1500
-              })
-        }
-    }); 
-
-    const submitForma = (e)=>{
+    const updateForm = (e)=>{
         e.preventDefault();
-        // console.log(formValues);
-        newProject({ 
-            variables: formValues
-        });
     }
-    
-    // if(loading) return  "cargando...";
-    
-    // if(error) return `submission error! ${error.message}`;
 
-    return (
+    return(
         <div>
             <div className="section products">
             <div className="product__info">
-                <h1 className="producto__info-title">Proyecto</h1>
-                <form onSubmit={submitForma}>
+                <h1 className="producto__info-title">Actualizar Proyecto</h1>
+                <form onSubmit={updateForm}>
                     <div className="grid-form">
                          <div className="input">
                             <label>Nombre del projecto</label>
@@ -127,4 +90,3 @@ export const CreateProject = () =>{
         </div>
     )
 };
-

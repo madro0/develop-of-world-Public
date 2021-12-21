@@ -15,10 +15,13 @@ const Projects = () => {
     })
     
     useEffect(()=>{
+        
         if(error){
             toast.error('Error consultado usuarios');
         }
     })
+
+    
 
     useEffect(()=>{
         if(dataMutationDeleted){
@@ -81,7 +84,15 @@ const Projects = () => {
                                     
                                     {/* <td>{itemProject.objectives.type = "ESPECIFICO"? "ESPECIFICO" :""}</td> */}
                                     <td>{`${itemProject.leader.name} ${itemProject.leader.lastName}` }</td>
-                                    <td><button onClick={()=>submitDeleteProject(itemProject._id)}>Eliminar projecto</button></td>
+                                    <td>
+                                        <button onClick={()=>submitDeleteProject(itemProject._id)} className='icon' >
+                                            <i className='bx bxs-trash' ></i>
+                                        </button>
+
+                                        {/* <button className='icon'>
+                                            <i className='icon bx bxs-edit-alt' ></i>
+                                        </button> */}
+                                    </td>
                                 </tr>
                             ))
                         }
