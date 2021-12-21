@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/src/server.js",
-    "traspilacion": "copyfiles --up 1 src/public/*.html dist",
-    "build": "tsc && npm run transpilacion",
+    "start": "node dist/server.js",
+    "traspilation": "copyfiles --up 1 src/public/*.html dist",
+    "build": "tsc && npm run traspilation",
     "ts:node": "ts-node src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon"
@@ -29,6 +29,7 @@
     "D": "^1.0.0",
     "apollo-server-express": "^3.5.0",
     "bcrypt": "^5.0.1",
+    "copyfiles": "^2.4.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",

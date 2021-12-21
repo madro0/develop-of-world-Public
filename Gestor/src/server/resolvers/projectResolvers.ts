@@ -7,6 +7,7 @@ const projectResolvers = {
             const projectsDb = await ProjectModel.find().populate('leader');
             return projectsDb;
         },
+        
     },
     Mutation : {
         createProject : async (parent:any, args:any)=>{

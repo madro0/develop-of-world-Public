@@ -53,6 +53,21 @@ const projectTypes = (0, apollo_server_express_1.gql) `
             leader: String!
             objectives: [createObjective]
         ): Project
+
+        updateProject(
+            _id: String!
+            name: String
+            phase: Enum_PhaseProyect
+            state: Enum_StateProyect
+            startDate: Date
+            endDate: Date
+            leader: String
+            objectives: [createObjective]
+        ): Project
+
+        deleteProject(
+            _id: String,
+        ): Project
     }
 `;
 exports.projectTypes = projectTypes;

@@ -45,7 +45,7 @@ const userResolver = {
         updateUser: (parent, args) => __awaiter(void 0, void 0, void 0, function* () {
             const userDb = yield user_1.UserModel.findByIdAndUpdate(args._id, {
                 name: args.name,
-                lastname: args.lastName,
+                lastName: args.lastName,
                 email: args.email,
                 role: args.role,
                 state: args.state

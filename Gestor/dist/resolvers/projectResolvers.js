@@ -31,6 +31,31 @@ const projectResolvers = {
             });
             return projectDb;
         }),
+        updateProject: (parent, args) => __awaiter(void 0, void 0, void 0, function* () {
+            const projectDb = yield project_1.ProjectModel.findOneAndUpdate(args._id, {
+                name: args.name,
+                phase: args.phase,
+                state: args.state,
+                startDate: args.startDate,
+                endDate: args.endDate,
+                leader: args.leader,
+                objectives: args.objectives
+            });
+            return projectDb;
+        }),
+        deleteProject: (parent, args) => __awaiter(void 0, void 0, void 0, function* () {
+            if (Object.keys(args).includes('_id')) {
+                try {
+                    const projecDeleted = yield project_1.ProjectModel.findOneAndDelete({ _id: args._id });
+                    if (!projecDeleted)
+                        throw new Error(`El projecto con id ${args._id} no existe`);
+                    return projecDeleted;
+                }
+                catch (error) {
+                    throw new Error('Error al intentar eliminar el proyecto');
+                }
+            }
+        })
     },
 };
 exports.projectResolvers = projectResolvers;
