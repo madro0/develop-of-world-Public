@@ -27,7 +27,7 @@ app.use(cors());
 app.get('/',(req:any, res:any)=>res.send("hola"));
 // app.use(require('./'));
 
-app.listen(env.PORT, async()=>{
+app.listen(process.env.PORT||4000, async()=>{
     await connectMongoDb();
     await server.start();
     server.applyMiddleware({app} )
